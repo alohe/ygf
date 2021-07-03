@@ -1,0 +1,467 @@
+:root {
+  --dark: #333333;
+  --dark-1: #444444;
+  --dark-2: #555555;
+  --dark-3: #666666;
+  --light: #777777;
+
+  --green: #00bc87;
+  --light-green: #bdffe9;
+  --blue: #00c2ee;
+  --light-blue: #c0f6ff;
+  --yellow: #ffa800;
+  --light-yellow: #ffe7bd;
+  --red: #d00090;
+  --light-red: #ffbdee;
+  --orange: #e74c3c;
+  --light-orange: #ffc0bd;
+
+  --dark-pink: #d63171;
+  --pink: #ea4c89;
+  --pink-light: #ec5e95;
+  --light-pink: #ffe6ef;
+  --light-0: #fafafa;
+  --light-1: #f3f3f4;
+  --light-2: #cecece;
+  --light-3: #999999;
+  --light-4: #585858;
+  --shadow: #0000001a;
+  --light-btn-bg: #ededed;
+}
+
+/* Focusing the button with a keyboard will show a dashed black line. */
+button:focus {
+  outline: none;
+}
+
+input,
+optgroup,
+select,
+textarea:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+a{
+  color: var(--dark);
+  transition: 0.3s;
+  &:hover{
+    color: var(--pink);
+  }
+}
+
+.text-pink {
+  color: var(--pink);
+}
+
+.main-header {
+  margin-top: 50px;
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  select {
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 10px;
+    border: solid 3px var(--light-pink);
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 45px;
+    color: var(--dark);
+    background-position-x: calc(100% - 20px);
+    border-radius: 10px;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  textarea {
+    font-weight: 500;
+    border: solid 3px var(--light-pink);
+    width: 100%;
+    padding: 20px;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+  }
+
+  button {
+    border: none;
+    width: 120px;
+    height: 45px;
+    background: var(--pink);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Lato";
+    letter-spacing: 0.3px;
+    border-radius: 8px;
+  }
+}
+
+.title {
+  font-family: "Lato";
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: var(--dark);
+}
+
+.main-form {
+  .title {
+    font-family: "Lato";
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: var(--dark);
+  }
+
+  .input {
+    position: relative;
+    font-family: "Lato";
+    margin-bottom: 15px;
+
+    input {
+      border: solid 1.5px var(--light-2);
+      border-radius: 10px;
+      height: 50px;
+      font-size: 13px;
+      padding-left: 15px;
+      padding-right: 10px;
+      padding-top: 15px;
+      width: 100%;
+
+      &:focus {
+        border: solid 2px var(--pink-light);
+      }
+
+      & + label {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        font-size: 15px;
+        color: var(--light);
+        transition: 0.3s;
+        z-index: 0;
+      }
+
+      &:focus + label {
+        position: absolute;
+        left: 15px;
+        top: 6.5px;
+        font-size: 12px;
+        color: var(--light);
+        z-index: 0;
+      }
+
+      &.active + label {
+        position: absolute;
+        left: 15px;
+        top: 6.5px;
+        font-size: 12px;
+        color: var(--light);
+        z-index: 0;
+      }
+    }
+    textarea {
+      border: solid 1.5px var(--light-2);
+      border-radius: 10px;
+      height: 100px;
+      font-size: 13px;
+      padding-left: 15px;
+      padding-right: 10px;
+      padding-top: 23px;
+      width: 100%;
+
+      &:focus {
+        border: solid 2px var(--light-pink);
+      }
+
+      & + label {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        font-size: 15px;
+        color: var(--light);
+        transition: 0.3s;
+        z-index: 0;
+      }
+
+      &:focus + label {
+        position: absolute;
+        left: 15px;
+        top: 6.5px;
+        font-size: 12px;
+        color: var(--light);
+        z-index: 0;
+      }
+
+      &.active + label {
+        position: absolute;
+        left: 15px;
+        top: 6.5px;
+        font-size: 12px;
+        color: var(--light);
+        z-index: 0;
+      }
+    }
+
+    select {
+      border: solid 1.5px var(--light-2);
+      border-radius: 10px;
+      height: 50px;
+      font-size: 13px;
+      padding-left: 13px;
+      padding-top: 15px;
+      width: 100%;
+      z-index: 2;
+      position: relative;
+      background: transparent;
+
+      & + label {
+        position: absolute;
+        left: 15px;
+        top: 6.5px;
+        font-size: 12px;
+        color: var(--light);
+        z-index: 3;
+      }
+
+      & + label + span {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        color: var(--light);
+        z-index: 0;
+        .icon {
+          font-size: 30px;
+          margin-top: -4px;
+          color: var(--pink);
+        }
+      }
+
+      -moz-appearance: none; /* Firefox */
+      -webkit-appearance: none; /* Safari and Chrome */
+      appearance: none;
+    }
+
+    button {
+      border: none;
+      background: none;
+      height: 50px;
+      width: 50px;
+      &.active {
+        border: solid 2px var(--light-pink);
+        border-radius: 10px;
+      }
+      &:hover {
+        background: var(--light-1);
+        border-radius: 10px;
+      }
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .submit-btn {
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: "Lato";
+    letter-spacing: 0.3px;
+    background: var(--pink);
+    color: white;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.3s;
+    &:hover {
+      background: var(--dark-pink);
+    }
+  }
+}
+
+.preview {
+  border: solid 2px var(--light-pink);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  img {
+    width: 70px;
+    margin-left: -13px;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.self-input {
+  position: relative;
+  .subject {
+    background: white;
+    color: var(--dark);
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: 700;
+    height: 58px;
+    border: solid 2px var(--light-pink);
+    font-size: 15px;
+    border-radius: 10px;
+
+    & + label {
+      position: absolute;
+      left: 15px;
+      top: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--light-3);
+    }
+  }
+}
+
+.flashy-colors {
+  animation: changecolors 6s infinite;
+}
+
+@keyframes changecolors {
+  0% {
+    color: var(--yellow);
+  }
+  20% {
+    color: var(--red);
+    translate-x: -20px;
+  }
+  40% {
+    color: var(--green);
+  }
+  60% {
+    color: var(--blue);
+  }
+  80% {
+    color: var(--orange);
+  }
+  100% {
+    color: var(--yellow);
+  }
+}
+
+
+footer{
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--light);
+  a{
+    font-weight: 500;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  img{
+    width: 20px;
+    margin-right: 5px;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 600px){
+  .main-header {
+    margin-top: 50px;
+    h1 {
+      font-size: 50px;
+      text-align: left;
+    }
+  }
+
+  .submit-btn{
+    margin-top: 10px;
+  }
+
+  .posts{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+.posts{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    .post{
+      border: solid 2px var(--light-1);
+      border-radius: 10px;
+      padding-top: 50px;
+      padding-bottom: 70px;
+      position: relative;
+      img{
+        width: 100px;
+      }
+
+      .to{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border-radius: 10px;
+        border: none;
+        height: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background: var(--light-pink);
+        color: var(--dark-pink);
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+      }
+      
+      .from{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        border-radius: 10px;
+        border: none;
+        height: 35px;
+        background: none;
+        color: var(--light);
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        &:hover{
+          color: var(--pink)
+        }
+      }
+      
+      .like{
+        border: none;
+        background-color: var(--light-0);
+        color: var(--light);
+        padding-left: 12px;
+        padding-right: 12px;
+        height: 35px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        transition: 0.3s;
+        font-size: 13px;
+        font-weight: 500;
+        &.active{
+         background: var(--pink);
+         color: white;
+        }
+        &:hover{
+         background: var(--light-pink);
+         color: var(--pink);
+        }
+      }
+      
+    }
+}
